@@ -1,7 +1,7 @@
 spring:
   ai:
     openai:
-      api-key: sk-a7PjFD9tYKN06qAi1Grjdie1Kt3yqKA7Msyx7qQP0zPi6pxsdv1OPU19qhoTqQno
+      api-key: ${OPEN_CODE_KEY}
       base-url: https://opencode.ai/zen/go/v1
       chat:
         model: deepseek-v4-flash
