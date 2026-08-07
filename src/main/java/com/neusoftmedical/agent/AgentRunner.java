@@ -26,7 +26,7 @@ public class AgentRunner implements CommandLineRunner {
 
         // 真实场景中用户端输入的内容
         String userPrompt = """
-                查询球蛋白数值在40到50区间，并且血小板计数在40到60之间的男性患者数据。
+                查询球蛋白数值在40到50区间，并且血小板计数在40到60之间，检查时间为近三个月的患者数据。
                 """;
         /*String userPrompt = """
                 查询患者r500的CT检查次数。
@@ -40,7 +40,7 @@ public class AgentRunner implements CommandLineRunner {
 
         String result = chatClient
                 .prompt()
-                .system(systemPrompt)
+                //.system(systemPrompt)
                 .user(userPrompt)
                 .call()
                 .content();
