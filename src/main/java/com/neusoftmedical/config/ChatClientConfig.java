@@ -14,9 +14,11 @@ public class ChatClientConfig {
     @Bean
     ChatClient chatClient(
             ChatModel chatModel,
+            SyncMcpToolCallbackProvider mcpTools,
+            MedicalDictSkill medicalDictSkill,
             QueryParserSkill queryParserSkill) {
         return ChatClient.builder(chatModel)
-                .defaultTools(queryParserSkill)
+                .defaultTools(mcpTools, medicalDictSkill, queryParserSkill)
                 .build();
     }
 }
