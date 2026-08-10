@@ -1,10 +1,7 @@
 package com.neusoftmedical.config;
 
-import com.neusoftmedical.skill.MedicalDictSkill;
-import com.neusoftmedical.skill.QueryParserSkill;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatModel;
-import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,12 +10,8 @@ public class ChatClientConfig {
 
     @Bean
     ChatClient chatClient(
-            ChatModel chatModel,
-            SyncMcpToolCallbackProvider mcpTools,
-            MedicalDictSkill medicalDictSkill,
-            QueryParserSkill queryParserSkill) {
+            ChatModel chatModel) {
         return ChatClient.builder(chatModel)
-                .defaultTools(mcpTools, medicalDictSkill, queryParserSkill)
                 .build();
     }
 }
