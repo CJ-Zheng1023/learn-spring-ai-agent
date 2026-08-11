@@ -1,0 +1,19 @@
+.slidev-layout h1 + p {
+  opacity: 0.7;
+}
+
+.slidev-layout table {
+  font-size: 0.85em;
+}
+
+.slidev-layout th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.slidev-layout blockquote {
+  border-left: 3px solid #7d97a8;
+  background: rgba(125, 151, 168, 0.1);
+  padding: 0.5em 1em;
+  border-radius: 0 6px 6px 0;
+}

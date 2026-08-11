@@ -36,5 +36,10 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Ohther ###
 .omo/
 .codegraph/
+slidev/node_modules
+slidev/dist
+slidev/slides-export.pdf

@@ -1,0 +1,19 @@
+{
+  "name": "learn-spring-ai-agent-slides",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "dev": "slidev --open",
+    "dev:remote": "slidev --remote",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/theme-bricks": "^0.25.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.62.1"
+  }
+}
