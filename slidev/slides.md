@@ -12,12 +12,6 @@ class: text-right
 
 医疗数据智能查询 Agent —— 自然语言驱动
 
-<div class="abs-br m-6 text-xs opacity-50">
-
-github.com/CJ-Zheng1023/learn-spring-ai-agent
-
-</div>
-
 ---
 
 # 目录
@@ -189,6 +183,7 @@ layout: intro
 | 模型 | OpenAI 兼容 API |
 | mcp | elasticsearch-mcp-server |
 | 构建 | Maven |
+| 代码地址 | [github.com/CJ-Zheng1023/learn-spring-ai-agent](https://github.com/CJ-Zheng1023/learn-spring-ai-agent) |
 
 ---
 
