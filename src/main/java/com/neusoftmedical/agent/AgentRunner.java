@@ -25,7 +25,7 @@ public class AgentRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         String arg= args[0];
-        String result = "";
+        String result;
         if (arg.equals("t1")) {
             // 做好约束
             String systemPrompt = """
@@ -36,18 +36,18 @@ public class AgentRunner implements CommandLineRunner {
                 严禁修改es数据，只可查询，只读不可写！
                 """;
             // 真实场景中用户端输入的内容
-            /*String userPrompt = """
-                查询球蛋白数值在40到50区间，并且血小板计数在40到60之间的患者数据。
-                """;*/
             String userPrompt = """
-                查询患者r500的红细胞分布宽度的平均值、中位数、最大值和最小值。
+                查询球蛋白数值在40到50区间，并且血小板计数在40到60之间的患者数据。
                 """;
+            /*String userPrompt = """
+                查询患者r500的红细胞分布宽度的平均值、中位数、最大值和最小值。
+                """;*/
             result = chatClient.prompt().tools(mcpTools, medicalDictSkill).system(systemPrompt).user(userPrompt).call().content();
         } else {
             // 做好约束
             String systemPrompt = """
                 仅返回json结构数据。
-                需要将json中的fieldName属性需要通过工具转成所对应的字段索引编码。
+                需要将json中的fieldName属性需要通过工具转成所对应的字段索引编码(fieldId)。
                 """;
             // 真实场景中用户端输入的内容
             String userPrompt = """
